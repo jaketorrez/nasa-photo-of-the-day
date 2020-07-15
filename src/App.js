@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { API_URL } from "./constants"
+import Header from "./components/Header"
 import "./App.css";
 
 function App() {
+  // Declare state variables
+
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Header />
     </div>
   );
 }
