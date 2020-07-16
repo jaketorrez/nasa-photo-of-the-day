@@ -4,13 +4,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  line-height: 1.4;
+  line-height: 1.5;
   font-size: 1.6rem;
-}
-
-.App {
-  display: grid;
-  justify-content: center;
-  text-align: center;
 }
 
