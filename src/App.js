@@ -25,10 +25,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <DailyPhoto 
-      date = { currentDate.toDateString() }
-      imageData={ imageData } />
+      <div className="top-content">
+        <Header />
+        <DailyPhoto 
+        date = { currentDate.toDateString() }
+        imageData={ imageData } />
+      </div>
     </div>
   );
 }

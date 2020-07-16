@@ -10,7 +10,9 @@ const DailyPhoto = props => {
         <title>{ imageData.title }</title>
         </div>
         <img src={ imageData.url} alt={ imageData.title } />
-        <p>{ imageData.explanation }</p>
+        <div className="image-explanation">
+            <p>{ imageData.explanation }</p>
+        </div>
     </>
       );
 }
