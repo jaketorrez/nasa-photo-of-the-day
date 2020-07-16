@@ -1,18 +1,11 @@
 import React from "react";
 
-const Header = props => {
-    const { date } = props;
+const Header = () => {
 
     return (
-        <>
         <div className="header-container">
-            <h1>NASA: The Wonders of Space</h1>
-            <h2>It's { date.toString() }.</h2>
+            <h1>NASA: Showing Off the Wonders of Space</h1>
         </div>
-        <div className="daily-photo-container">
-
-        </div>
-        </>
     );
 }
 
