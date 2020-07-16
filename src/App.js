@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import styled from "styled-components";
 import { API_URL, API_KEY } from "./constants";
 import Header from "./components/Header";
 import DailyPhoto from "./components/DailyPhoto";
-import "./App.css";
+import "./Styles";
 
 function App() {
   // Constant stateless variables
