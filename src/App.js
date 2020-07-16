@@ -5,11 +5,15 @@ import "./App.css";
 
 function App() {
   // Declare state variables
+  const [ dailyPhoto, setDailyphoto ] = useState();
 
+  // Declare all other variables
+  const currentDate = new Date();
 
   return (
     <div className="App">
-      <Header />
+      <Header 
+      date = { currentDate.toDateString() } />
     </div>
   );
 }
