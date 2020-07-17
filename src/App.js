@@ -3,7 +3,8 @@ import axios from "axios";
 import { API_URL, API_KEY } from "./constants";
 import Header from "./components/Header";
 import DailyPhoto from "./components/DailyPhoto";
-import "./Styles";
+import "./styles/Styles";
+import "./styles/App.less";
 
 function App() {
   // Constant stateless variables

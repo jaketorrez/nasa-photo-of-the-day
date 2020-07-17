@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/DailyPhoto.less";
 
 const DailyPhoto = props => {
     const { date, imageData } = props;
