@@ -3,10 +3,10 @@ import axios from "axios";
 import { API_URL, API_KEY } from "./constants";
 import Header from "./components/Header";
 import DailyPhoto from "./components/DailyPhoto";
-import "./styles/Styles";
+import { GridWrapper, Button } from "./styles/Styles";
 
 function App() {
-  // Constant stateless variables
+  // Stateless constants
   const url = `${API_URL}?api_key=${API_KEY}`;
   const currentDate = new Date();
 
@@ -14,25 +14,32 @@ function App() {
   const [ imageData, setImageData ] = useState({});
 
   // Fetch daily image data with axios
-    const getImageData = () => {
-      axios.get(url).then(resp => {
+    const getImageData = async () => {
+      try {
+        const resp = await axios.get(url);
         setImageData(resp.data);
-      }).catch(err => {
+      } catch(err) {
         console.log(err);
-      });
+      }
     }
+
+    // Invoke getImageData only once, after first render
     useEffect(() => {
       getImageData();
     }, []);
 
   return (
     <div className="App">
-      <div className="top-content">
+      <GridWrapper className="top-content">
         <Header />
         <DailyPhoto 
         date = { currentDate.toDateString() }
         imageData={ imageData } />
-      </div>
+        <div className="btn-container">
+          <Button>Discover More!</Button>
+        </div>
+        <hr></hr>
+      </GridWrapper>
     </div>
   );
 }

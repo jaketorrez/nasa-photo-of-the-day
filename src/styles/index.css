@@ -1,0 +1,46 @@
+/***********************************************************************
+*  Reset *
+***********************************************************************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  body {
+  line-height: 1;
+    }
+    footer, header, nav, section {
+      display: block;
+      }
+    
+      /* Base styles */
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-family: "Merriweather", serif;
+        font-size: 1.5rem;
+      }
+      h1, h2, h3 {
+        line-height: 1.2;
+        font-size: 2.5rem;
+        font-family: "Roboto", sans-serif;
+        padding: 2%;
+      }
+      h1 {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+      }
+      p {
+        line-height: 1.8;
+        text-align: justify;
+      }
+      a {
+        text-decoration: none;
+      }
+      
