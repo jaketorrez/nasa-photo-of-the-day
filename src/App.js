@@ -4,20 +4,22 @@ import { API_URL, API_KEY } from "./constants";
 import Header from "./components/Header";
 import DailyPhoto from "./components/DailyPhoto";
 import "./styles/Styles";
-import "./styles/App.less";
 
 function App() {
   // Constant stateless variables
-  const url = `${API_URL}/?api_key=${API_KEY}`;
+  const url = `${API_URL}?api_key=${API_KEY}`;
   const currentDate = new Date();
 
   // Variables with state
   const [ imageData, setImageData ] = useState({});
 
   // Fetch daily image data with axios
-    const getImageData = async () => {
-      const resp = await axios.get(url);
-      setImageData(resp.data);
+    const getImageData = () => {
+      axios.get(url).then(resp => {
+        setImageData(resp.data);
+      }).catch(err => {
+        console.log(err);
+      });
     }
     useEffect(() => {
       getImageData();
