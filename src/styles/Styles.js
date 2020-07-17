@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const GridWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
-`;
-
-export const Button = styled.button`
+export const DiscoverButton = styled.button`
     padding: 3% 5%;
     border: 2px solid #010203;
     border-radius: 3px;
@@ -18,3 +12,8 @@ export const Button = styled.button`
     text-decoration: none;
 `;
 
+export const GridWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+`;
